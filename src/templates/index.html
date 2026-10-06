@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MiniCam</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for(
+            'static',
+            filename='style.css'
+        ) }}"
+    >
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h1>MiniCam</h1>
+
+
+    <!-- ================================================= -->
+    <!-- CONTROLS -->
+    <!-- ================================================= -->
+
+    <div class="controls">
+
+        <button
+            id="scanButton"
+        >
+            Single Shot
+        </button>
+
+        <button
+            id="burstButton"
+        >
+            Shot sequence (30s)
+        </button>
+
+        <button
+            id="streamButton"
+        >
+            Constant Stream
+        </button>
+
+
+        <button
+            id="stopButton"
+            disabled
+        >
+            Stop Stream
+        </button>
+
+    </div>
+
+
+    <p id="status">
+        Ready
+    </p>
+
+    <div
+        id="burstResults"
+        class="burst-results"
+        aria-live="polite"
+    ></div>
+
+
+    <!-- ================================================= -->
+    <!-- CONTENT -->
+    <!-- ================================================= -->
+
+    <div class="content">
+
+
+        <!-- CAMERA -->
+
+        <div class="camera-section">
+
+            <h2>Camera</h2>
+
+            <img
+                id="cameraImage"
+                src=""
+                alt="Camera image"
+            >
+
+        </div>
+
+
+        <!-- PHOTODIODES -->
+
+        <div class="scan-section">
+
+            <h2>Photodiodes</h2>
+
+            <div
+                id="grid"
+                class="grid"
+            >
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script
+    src="{{ url_for(
+        'static',
+        filename='app.js'
+    ) }}"
+></script>
+
+
+</body>
+
+</html>

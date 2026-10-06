@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 18px;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+
+#status {
+    margin-top: 15px;
+}
+
+.content {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.camera-section,
+.scan-section {
+    flex: 1;
+}
+
+#cameraImage {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+}
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 80px);
+
+    grid-template-rows:
+        repeat(5, 80px);
+
+    gap: 5px;
+}
+
+.cell {
+    border: 1px solid #888; /*[cite: 1] */
+    display: flex; /*[cite: 1] */
+    flex-direction: column; /*[cite: 1] */
+    justify-content: center; /*[cite: 1] */
+    align-items: center; /*[cite: 1] */
+    background: white; /*[cite: 1] */
+    transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.cell .number {
+    font-size: 14px; /*[cite: 1] */
+    font-weight: 600;
+    text-shadow: 0px 0px 2px rgba(128, 128, 128, 0.4);
+}
+
+.cell .value {
+    font-size: 20px; /*[cite: 1] */
+    font-weight: bold; /*[cite: 1] */
+    text-shadow: 0px 0px 3px rgba(128, 128, 128, 0.5);
+}
+
+.empty {
+    background: transparent;
+    border: none;
+}
+
+.burst-results {
+    margin: 16px 0;
+}
+
+.burst-results a {
+    display: inline-block;
+    margin: 4px 10px 4px 0;
+}
+
+.burst-images {
+    margin-top: 8px;
+}
+
+.burst-images a {
+    display: block;
+    width: fit-content;
+}
+
+.burst-warning {
+    color: #9a5b00;
+}
